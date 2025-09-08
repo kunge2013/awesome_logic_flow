@@ -176,6 +176,12 @@ export const constantRoutes = [
         name: 'simple',
         meta: { title: 'simple' }
       },
+       {
+        path: 'node',
+        component: () => import('@/views/logicflow/node/customer'),
+        name: 'customer',
+        meta: { title: 'customer' }
+      },
       {
         path: 'menu2',
         component: () => import('@/views/nested/menu2/index'),

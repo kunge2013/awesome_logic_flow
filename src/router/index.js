@@ -160,6 +160,31 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/logicflow',
+    component: Layout,
+    redirect: '/logicflow/simple',
+    name: 'logicflow',
+    meta: {
+      title: 'logicflow',
+      icon: 'nested'
+    },
+    children: [
+      {
+        path: 'simple',
+        component: () => import('@/views/logicflow/hello/index'),
+        name: 'simple',
+        meta: { title: 'simple' }
+      },
+      {
+        path: 'menu2',
+        component: () => import('@/views/nested/menu2/index'),
+        name: 'Menu2',
+        meta: { title: 'menu2' }
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]

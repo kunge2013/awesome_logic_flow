@@ -59,7 +59,7 @@
 
 <style scoped>
   .container {
-    width: 1000px;
-    height: 500px;
+    width: 80%;
+    height: 800px;
   }
 </style>

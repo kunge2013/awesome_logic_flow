@@ -187,6 +187,12 @@ export const constantRoutes = [
         component: () => import('@/views/nested/menu2/index'),
         name: 'Menu2',
         meta: { title: 'menu2' }
+      },
+      {
+        path: 'logincpannel',
+        component: () => import('@/views/logicflow/flow/logicPannel'),
+        name: 'logicPannel',
+        meta: { title: 'logicPannel' }
       }
     ]
   },

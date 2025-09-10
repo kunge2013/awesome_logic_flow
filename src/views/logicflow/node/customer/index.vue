@@ -5,8 +5,8 @@
 <script>
   import LogicFlow from "@logicflow/core";
   import "@logicflow/core/lib/style/index.css";
-  import data from './CustomData.ts';
-  import {CustomRectNode} from './CustomRectNode.ts';
+  import data from './CustomData.js';
+  import {CustomRectNode} from './CustomRectNode.js';
 
 
   export default {

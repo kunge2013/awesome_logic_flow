@@ -1,20 +1,5 @@
 import LogicFlow, { RectNode, RectNodeModel } from '@logicflow/core';
 
-export type CustomProperties = {
-  // 形状属性
-  width?: number;
-  height?: number;
-  radius?: number;
-
-  // 文字位置属性
-  refX?: number;
-  refY?: number;
-
-  // 样式属性
-  style?: LogicFlow.CommonTheme;
-  textStyle?: LogicFlow.TextNodeTheme;
-};
-
 class CustomRectNode extends RectNode {}
 
 class CustomRectModel extends RectNodeModel {
@@ -26,8 +11,8 @@ class CustomRectModel extends RectNodeModel {
   }
 
   // 重写文本样式属性
-  getTextStyle(): LogicFlow.TextNodeTheme {
-    const { refX = 0, refY = 0 } = this.properties as CustomProperties;
+  getTextStyle() {
+    const { refX = 0, refY = 0 } = this.properties || {};
     const style = super.getTextStyle();
 
     // 通过 transform 重新设置 text 的位置：向下移动70px
